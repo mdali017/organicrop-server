@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
   res.send("Welcome to the server");
 });
 
-app.listen(port, () => {
-  connectDatabase();
+app.listen(port, async () => {
+  await connectDatabase();
   console.log(`Server is running on port: ${port}`);
 });
