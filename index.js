@@ -6,6 +6,8 @@ const productroute = require("./routes/productRoute");
 const app = express();
 const port = process.env.PORT || 3000;
 
+connectDatabase();
+
 const corsConfig = {
   origin: "*",
   credential: true,
@@ -24,6 +26,6 @@ app.get("/", (req, res) => {
 });
 
 app.listen(port, async () => {
-  await connectDatabase();
+  // await connectDatabase();
   console.log(`Server is running on port: ${port}`);
 });
