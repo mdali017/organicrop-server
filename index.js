@@ -8,12 +8,12 @@ const port = process.env.PORT || 3000;
 
 connectDatabase();
 
-const corsConfig = {
-  origin: "*",
-  credential: true,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-};
-app.use(cors(corsConfig));
+// const corsConfig = {
+//   origin: "*",
+//   credential: true,
+//   methods: ["GET", "POST", "PUT", "DELETE"],
+// };
+app.use(cors());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
